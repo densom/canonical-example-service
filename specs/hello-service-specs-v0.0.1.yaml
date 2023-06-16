@@ -1,0 +1,34 @@
+openapi: 3.0.2
+info:
+  title: Hello Service
+  version: '1.0'
+servers:
+  - url: http://localhost:3000/v1
+paths:
+  /:
+    get:
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/responses/default'
+              examples:
+                Simple:
+                  value:
+                    id: ed2c5a12fbfe5ab02d5aa3aa
+                    contact:
+                      firstName: Lamar
+                      lastName: Ritchie
+                    address:
+                      address1: 69502 Schultz Estates
+                      address2: ''
+                      city: Ileneland
+                      state: OH
+                      postalCode: 13685-9187
+components:
+  schemas:
+    responses:
+      default:
+        $ref: https://raw.githubusercontent.com/densom/canonical-example/main/specs/hello-service-specs-schema-v0.0.1.yaml#/components/schemas/ContactModel

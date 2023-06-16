@@ -1,0 +1,1 @@
+swagger-cli bundle --outfile ./out/hello-service-specs-bundled-v0.0.1.yaml --type yaml .\specs\hello-service-specs-v0.0.1.yaml
